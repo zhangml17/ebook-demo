@@ -1,0 +1,21 @@
+@import 'reset';
+
+// 1 rem = fontSize px
+// 1 px = (1 / fontSize)rem
+$fontSize:37.5;
+// px --> rem 的转换函数
+@function px2rem($px){
+    @return ($px / $fontSize)+rem
+}
+
+// 全局的居中布局
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    color: #333;
+    font-size: px2rem(20)
+}
